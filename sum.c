@@ -33,8 +33,9 @@ int numberOfBits(int num) {
   return output;
 }
 
-int bitsum(int first, int second) {
-  int output = 0;
+int *bitsum(int first, int second) {
+  int *output = (int *)malloc(sizeof(int));
+  *output = 0;
   int carry = 0;
   
   for (int i = 0; i < sizeof(int) * 8; ++i) {
@@ -45,7 +46,8 @@ int bitsum(int first, int second) {
     Result
       result = fullAdder(bitOfFirst, bitOfSecond, carry);
     carry = result.carry;
-    output += result.sum ? pow(2, i) : 0;
+
+    *output |= result.sum << i;
   }
 
   return output;

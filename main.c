@@ -69,7 +69,7 @@ void testFullAdder() {
 void testBitSum() {
   for (int i = 0; i < 30; ++i)
     for (int j = 0; j < 30; ++j) {
-      int output = bitsum(i, j);
+      int output = *bitsum(i, j);
       if (output != (i + j)) {
   	printf("WRONG: %d + %d != %d\n", i, j, output);
 	assert(0);

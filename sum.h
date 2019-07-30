@@ -1,3 +1,5 @@
+#include <stdlib.h>
+
 typedef struct AdderOutput Result;
 
 struct AdderOutput
@@ -9,5 +11,5 @@ struct AdderOutput
 Result halfAdder(int first, int second);
 Result fullAdder(int first, int second, int third);
 
-int bitsum(int first, int second);
+int *bitsum(int first, int second);
 int pow(int num, int exp);
