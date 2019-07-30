@@ -1,0 +1,9 @@
+*.out
+*.o
+.gitignore~
+main.c~
+main.dSYM
+makefile~
+sum.c~
+sum.h~
+main
